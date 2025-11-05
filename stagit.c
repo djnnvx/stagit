@@ -939,7 +939,7 @@ writeblob(git_object *obj, const char *fpath, const char *filename, size_t files
     fputs("</p></div>", fp);
 
     if (git_blob_is_binary((git_blob *)obj))
-        fputs("<p>Binary file.</p>\n", fp);
+        fputs("<p>binary file</p>\n", fp);
     else
         lc = writeblobhtml(fp, (git_blob *)obj);
 
@@ -1377,7 +1377,7 @@ int main(int argc, char *argv[]) {
 
     /* files for HEAD */
     fp = efopen("files.html", "w");
-    writeheader(fp, "Files");
+    writeheader(fp, "files");
     if (head)
         writefiles(fp, head);
     writefooter(fp);
@@ -1386,22 +1386,10 @@ int main(int argc, char *argv[]) {
 
     /* summary page with branches and tags */
     fp = efopen("refs.html", "w");
-    writeheader(fp, "Refs");
+    writeheader(fp, "refs");
     writerefs(fp);
     writefooter(fp);
     checkfileerror(fp, "refs.html", 'w');
-    fclose(fp);
-
-    /* Atom feed */
-    fp = efopen("atom.xml", "w");
-    writeatom(fp, 1);
-    checkfileerror(fp, "atom.xml", 'w');
-    fclose(fp);
-
-    /* Atom feed for tags / releases */
-    fp = efopen("tags.xml", "w");
-    writeatom(fp, 0);
-    checkfileerror(fp, "tags.xml", 'w');
     fclose(fp);
 
     /* rename new cache file on success */

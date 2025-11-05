@@ -16,7 +16,7 @@ struct repoinfo {
 
 static git_repository *repo;
 static const char *relpath = "";
-static char description[255] = "Repositories";
+static char description[255] = "evil.djnn.sh";
 static char *name = "";
 static char category[255];
 
@@ -129,7 +129,7 @@ void writeheader(FILE *fp) {
           "<b>evil.djnn.sh ~ repositories</b>\n"
           "\t\t</td></tr>\n\t</table>\n\t</center>\n</div>\n<br>\n",
           fp);
-    fputs("<div id=\"content\">\n\t<table id=\"index\">\n\t\t<thead>\n\t\t\t<tr><td>Name</td><td>Description</td><td>Last commit</td></tr>\n\t\t</thead>\n\t\t<tbody>", fp);
+    fputs("<div id=\"content\">\n\t<center><table id=\"index\">\n\t\t<thead>\n\t\t\t<tr><td><b>name</b></td><td><b>description</b></td><td></b>last commit</b></td></tr>\n\t\t</thead>\n\t\t<tbody>", fp);
 }
 
 void writefooter(FILE *fp) {
@@ -259,8 +259,6 @@ int main(int argc, char *argv[]) {
 
     // Write output
     writeheader(stdout);
-    fprintf(stdout, "<div class=\"repo-list\">\n");
-    fprintf(stdout, "<ul>\n");
     for (i = 0; i < nrepos; i++) {
         // open the repo, set globals as needed
         if (git_repository_open_ext(&repo, repos[i].path, GIT_REPOSITORY_OPEN_NO_SEARCH, NULL)) {
@@ -274,8 +272,6 @@ int main(int argc, char *argv[]) {
         writelog(stdout);
         git_repository_free(repo);
     }
-    fprintf(stdout, "</ul>\n");
-    fprintf(stdout, "</div>\n");
     writefooter(stdout);
 
     git_libgit2_shutdown();

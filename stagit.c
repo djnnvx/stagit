@@ -479,8 +479,7 @@ void writeheader(FILE *fp, const char *title) {
     if (description[0])
         fputs(" - ", fp);
     xmlencode(fp, description, strlen(description));
-    fputs("</title>\n<meta name=\"description\" content=\"evil.djnn.sh repositories\">\n"
-          fp);
+    fputs("</title>\n<meta name=\"description\" content=\"evil.djnn.sh repositories\">\n", fp);
     fputs("<link rel=\"icon\" type=\"image/png\" href=\"/assets/favicon.png\">\n"
           "<link rel=\"stylesheet\" type=\"text/css\" href=\"/assets/style.css\">\n"
           "<link rel=\"alternate\" type=\"application/atom+xml\" title=\"",

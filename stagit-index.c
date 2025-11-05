@@ -133,7 +133,7 @@ void writeheader(FILE *fp) {
 }
 
 void writefooter(FILE *fp) {
-    fputs("\n\t\t</tbody>\n\t</table>\n</center>\n</div>\n<center>\n<div id=\"footer\">\n"
+    fputs("\n\t\t</tbody>\n\t</table>\n</center>\n</div>\n<center>\n<br/>\n<div id=\"footer\">\n"
           "\t&copy; 2024 evil.djnn.sh &bull; generated with stagit\n"
           "</div>\n</center>",
           fp);

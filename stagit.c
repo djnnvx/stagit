@@ -513,7 +513,7 @@ void writeheader(FILE *fp, const char *title) {
 }
 
 void writefooter(FILE *fp) {
-    fputs("</div>\n</table>\n</div>\n<div id=\"footer\">\n"
+    fputs("</table>\n</div>\n<br/>\n<div id=\"footer\">\n"
           "\t&copy; 2024 djnn, inc &bull; generated with stagit\n"
           "</div>\n</center>",
           fp);
@@ -928,7 +928,7 @@ writeblob(git_object *obj, const char *fpath, const char *filename, size_t files
 
     fp = efopen(fpath, "w");
     writeheader(fp, filename);
-    fputs("<div class=\"container\"><p>", fp);
+    fputs("<table id=\"container\"><div class=\"container\"><p>", fp);
     xmlencode(fp, filename, strlen(filename));
     fprintf(fp, " <span class=\"desc\">(%zuB)</span>", filesize);
     fputs("</p></div>", fp);
@@ -1320,8 +1320,8 @@ int main(int argc, char *argv[]) {
     relpath = "";
     mkdir("commit", S_IRWXU | S_IRWXG | S_IRWXO);
     writeheader(fp, "Log");
-    fputs("<table id=\"log\"><thead>\n<tr><td><b>Date</b></td><td><b>Commit message</b></td>"
-          "<td class=\"num\"><b>Files</b></td><td class=\"num\"><b>+</b></td>"
+    fputs("<table id=\"log\"><thead>\n<tr><td><b>date</b></td><td><b>commit message</b></td>"
+          "<td class=\"num\"><b>files</b></td><td class=\"num\"><b>+</b></td>"
           "<td class=\"num\"><b>-</b></td></tr>\n</thead><tbody>\n",
           fp);
 

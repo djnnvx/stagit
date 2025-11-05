@@ -122,18 +122,18 @@ void writeheader(FILE *fp) {
           "<meta name=\"keywords\" content=\"git, repositories\">\n"
           "<meta name=\"author\" content=\"djnn\">\n",
           fp);
-    fputs("<link rel=\"icon\" type=\"image/png\" href=\"/assets/favicon.png\">\n"
-          "<link rel=\"stylesheet\" type=\"text/css\" href=\"/assets/style.css\">\n",
+    fputs("<link rel=\"icon\" type=\"image/png\" href=\"/favicon.png\">\n"
+          "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\">\n",
           fp);
     fputs("<div class=\"container\">\n\t<center>\n\t<table>\n\t\t<tr><td>\n"
           "<b>evil.djnn.sh ~ repositories</b>\n"
           "\t\t</td></tr>\n\t</table>\n\t</center>\n</div>\n<br>\n",
           fp);
-    fputs("<div id=\"content\">\n\t<center><table id=\"index\">\n\t\t<thead>\n\t\t\t<tr><td><b>name</b></td><td><b>description</b></td><td></b>last commit</b></td></tr>\n\t\t</thead>\n\t\t<tbody>", fp);
+    fputs("<div id=\"content\">\n\t<center><table id=\"index\">\n\t\t<thead>\n\t\t\t<tr><td><b>name</b></td><td><b>description</b></td><td><b>last commit</b></td></tr>\n\t\t</thead>\n\t\t<tbody>", fp);
 }
 
 void writefooter(FILE *fp) {
-    fputs("\n\t\t</tbody>\n\t</table>\n</center>\n</div>\n<div id=\"footer\">\n"
+    fputs("\n\t\t</tbody>\n\t</table>\n</center>\n</div>\n<center>\n<div id=\"footer\">\n"
           "\t&copy; 2024 evil.djnn.sh &bull; generated with stagit\n"
           "</div>\n</center>",
           fp);

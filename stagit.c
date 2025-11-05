@@ -492,7 +492,7 @@ void writeheader(FILE *fp, const char *title) {
     fputs("<link rel=\"alternate\" type=\"application/atom+xml\" title=\"", fp);
     xmlencode(fp, name, strlen(name));
     fprintf(fp, " Atom Feed (tags)\" href=\"%stags.xml\">\n", relpath);
-    fputs("<center>\n<a href=\"/index.html\">\n<img src=\"/assets/acidvegas.png\"><br>\n<img src=\"/assets/mostdangerous.png\"></a><br><br>\n<div id=\"content\">\n<div class=\"container\">\n\t<table id=\"container\">\n\t\t<tr><td><h1>", fp);
+    fputs("<center>\n<a href=\"/index.html\">\n</a><br><br>\n<div id=\"content\">\n<div class=\"container\">\n\t<table id=\"container\">\n\t\t<tr><td><h1>", fp);
     xmlencode(fp, strippedname, strlen(strippedname));
     fputs("</h1><span class=\"desc\"> - ", fp);
     xmlencode(fp, description, strlen(description));

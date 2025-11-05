@@ -525,7 +525,7 @@ size_t writeblobhtml(FILE *fp, const git_blob *blob) {
     const char *s = git_blob_rawcontent(blob);
 
     len = git_blob_rawsize(blob);
-    fputs("<pre id=\"blob\" style=\"text-align: left\">\n", fp);
+    fputs("<pre id=\"blob\" style=\"text-align: left; width: 33.33%; margin: 0 auto\">\n", fp);
 
     if (len > 0) {
         for (i = 0, prev = 0; i < len; i++) {
@@ -1307,7 +1307,7 @@ int main(int argc, char *argv[]) {
                 fprintf(stderr, "Error parsing markdown\n");
             fputs("</div>\n", fp);
         } else {
-            fputs("<pre style=\"text-align: left\" id=\"readme\">", fp);
+            fputs("<pre style=\"text-align: left; width: 33.33%; margin: 0 auto\" id=\"readme\">", fp);
             xmlencode(fp, s, strlen(s));
             fputs("</pre>\n", fp);
         }

@@ -126,7 +126,7 @@ void writeheader(FILE *fp) {
           "<link rel=\"stylesheet\" type=\"text/css\" href=\"/assets/style.css\">\n",
           fp);
     fputs("<div class=\"container\">\n\t<center>\n\t<table>\n\t\t<tr><td>\n"
-          "<b>contact</b>\n"
+          "<b>evil.djnn.sh ~ repositories</b>\n"
           "\t\t</td></tr>\n\t</table>\n\t</center>\n</div>\n<br>\n",
           fp);
     fputs("<div id=\"content\">\n\t<table id=\"index\">\n\t\t<thead>\n\t\t\t<tr><td>Name</td><td>Description</td><td>Last commit</td></tr>\n\t\t</thead>\n\t\t<tbody>", fp);
@@ -134,7 +134,7 @@ void writeheader(FILE *fp) {
 
 void writefooter(FILE *fp) {
     fputs("\n\t\t</tbody>\n\t</table>\n</div>\n<div id=\"footer\">\n"
-          "\t&copy; 2024 djnn.sh &bull; generated with stagit\n"
+          "\t&copy; 2024 evil.djnn.sh &bull; generated with stagit\n"
           "</div>\n</center>",
           fp);
 }
@@ -259,6 +259,8 @@ int main(int argc, char *argv[]) {
 
     // Write output
     writeheader(stdout);
+    fprintf(fp, "<div class=\"repo-list\">\n");
+    fprintf(fp, "<ul>\n");
     for (i = 0; i < nrepos; i++) {
         // open the repo, set globals as needed
         if (git_repository_open_ext(&repo, repos[i].path, GIT_REPOSITORY_OPEN_NO_SEARCH, NULL)) {
@@ -272,6 +274,8 @@ int main(int argc, char *argv[]) {
         writelog(stdout);
         git_repository_free(repo);
     }
+    fprintf(fp, "</ul>\n");
+    fprintf(fp, "</div>\n");
     writefooter(stdout);
 
     git_libgit2_shutdown();

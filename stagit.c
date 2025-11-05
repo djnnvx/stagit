@@ -479,9 +479,7 @@ void writeheader(FILE *fp, const char *title) {
     if (description[0])
         fputs(" - ", fp);
     xmlencode(fp, description, strlen(description));
-    fputs("</title>\n<meta name=\"description\" content=\"acidvegas repositories\">\n"
-          "<meta name=\"keywords\" content=\"git, repositories, supernets, irc, python, stagit\">\n"
-          "<meta name=\"author\" content=\"acidvegas\">\n",
+    fputs("</title>\n<meta name=\"description\" content=\"evil.djnn.sh repositories\">\n"
           fp);
     fputs("<link rel=\"icon\" type=\"image/png\" href=\"/assets/favicon.png\">\n"
           "<link rel=\"stylesheet\" type=\"text/css\" href=\"/assets/style.css\">\n"
@@ -494,7 +492,7 @@ void writeheader(FILE *fp, const char *title) {
     fprintf(fp, " Atom Feed (tags)\" href=\"%stags.xml\">\n", relpath);
     fputs("<center>\n<a href=\"/index.html\">\n</a><br><br>\n<div id=\"content\">\n<div class=\"container\">\n\t<table id=\"container\">\n\t\t<tr><td><h1>", fp);
     xmlencode(fp, strippedname, strlen(strippedname));
-    fputs("</h1><span class=\"desc\"> - ", fp);
+    fputs("</h1><span class=\"desc\">", fp);
     xmlencode(fp, description, strlen(description));
     fputs("</span></td></tr>\n", fp);
     if (cloneurl[0]) {
@@ -522,7 +520,7 @@ void writeheader(FILE *fp, const char *title) {
 
 void writefooter(FILE *fp) {
     fputs("</div>\n</table>\n</div>\n<div id=\"footer\">\n"
-          "\t&copy; 2023 acidvegas, inc &bull; generated with stagit\n"
+          "\t&copy; 2024 djnn, inc &bull; generated with stagit\n"
           "</div>\n</center>",
           fp);
 }

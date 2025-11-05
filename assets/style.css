@@ -59,7 +59,6 @@ td.num{text-align:right}
 #blob a:target{color:#eee}
 #content table td{vertical-align:top;white-space:nowrap}
 #index .category td {font-style: italic}
-#index .item-repo td:first-child{padding-left:1.5em}
 #footer{font-size:smaller;padding-top:10px}
 #files tbody tr:hover td, #index .item-repo:hover td, #log tbody tr:hover td{background-color:var(--row-hover)}
 #files tr td:nth-child(2), #index .item-repo td:nth-child(2), #log tr td:nth-child(2){white-space:normal}
@@ -81,11 +80,6 @@ img, h1, h2{vertical-align: middle}
 pre a.h{color:#00cdcd}
 pre a.h:hover, pre a.i:hover, pre a.d:hover{text-decoration:none}
 pre:not(#readme){overflow-x:auto;border:1px solid var(--code-border);border-radius:4px;padding: 10px}
-
-/* repository list centering helper */
-.repo-list{max-width:800px;margin:2rem auto;display:flex;flex-direction:column;gap:0.5rem;padding:0 1rem}
-.repo-list ul{list-style:none;padding:0;margin:0;width:100%}
-.repo-list li{padding:0.75rem 1rem;background:var(--card-bg);border:1px solid var(--border);border-radius:6px;text-align:center}
 
 @media (max-width:640px){
   .container{padding:0.5rem}

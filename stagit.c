@@ -928,7 +928,7 @@ writeblob(git_object *obj, const char *fpath, const char *filename, size_t files
 
     fp = efopen(fpath, "w");
     writeheader(fp, filename);
-    fputs("<table id=\"container\"><div class=\"container\"><p>", fp);
+    fputs("<div class=\"blob\"><p>", fp);
     xmlencode(fp, filename, strlen(filename));
     fprintf(fp, " <span class=\"desc\">(%zuB)</span>", filesize);
     fputs("</p></div>", fp);

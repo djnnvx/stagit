@@ -53,7 +53,12 @@ img{max-width:800px}
 .container{border:1px solid var(--border);border-radius:5px;padding-top:10px;padding-bottom:10px;overflow-x:auto}
 .desc{color:var(--muted)}
 td.num{text-align:right}
-#blob{text-align:left}
+#blob{
+    width: 33.33%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    text-align:left
+}
 #blob a{color:#555}
 #blob a:hover{color:var(--accent);text-decoration:none}
 #blob a:target{color:#eee}

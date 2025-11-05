@@ -480,15 +480,10 @@ void writeheader(FILE *fp, const char *title) {
         fputs(" - ", fp);
     xmlencode(fp, description, strlen(description));
     fputs("</title>\n<meta name=\"description\" content=\"evil.djnn.sh repositories\">\n", fp);
-    fputs("<link rel=\"icon\" type=\"image/png\" href=\"/assets/favicon.png\">\n"
-          "<link rel=\"stylesheet\" type=\"text/css\" href=\"/assets/style.css\">\n"
-          "<link rel=\"alternate\" type=\"application/atom+xml\" title=\"",
+    fputs("<link rel=\"icon\" type=\"image/png\" href=\"/favicon.png\">\n"
+          "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\">\n",
           fp);
     xmlencode(fp, name, strlen(name));
-    fprintf(fp, " Atom Feed\" href=\"%satom.xml\">\n", relpath);
-    fputs("<link rel=\"alternate\" type=\"application/atom+xml\" title=\"", fp);
-    xmlencode(fp, name, strlen(name));
-    fprintf(fp, " Atom Feed (tags)\" href=\"%stags.xml\">\n", relpath);
     fputs("<center>\n<a href=\"/index.html\">\n</a><br><br>\n<div id=\"content\">\n<div class=\"container\">\n\t<table id=\"container\">\n\t\t<tr><td><h1>", fp);
     xmlencode(fp, strippedname, strlen(strippedname));
     fputs("</h1><span class=\"desc\">", fp);
@@ -502,12 +497,12 @@ void writeheader(FILE *fp, const char *title) {
         fputs("</a></i></td></tr>", fp);
     }
     fputs("\t\t<tr><td>\n", fp);
-    fprintf(fp, "<a href=\"%slog.html\">Log</a> | ", relpath);
-    fprintf(fp, "<a href=\"%sfiles.html\">Files</a> | ", relpath);
-    fprintf(fp, "<a href=\"%srefs.html\">Refs</a> | ", relpath);
-    fprintf(fp, "<a href=\"%sarchive.tar.gz\">Archive</a>", relpath);
+    fprintf(fp, "<a href=\"%slog.html\">log</a> | ", relpath);
+    fprintf(fp, "<a href=\"%sfiles.html\">files</a> | ", relpath);
+    fprintf(fp, "<a href=\"%srefs.html\">refs</a> | ", relpath);
+    fprintf(fp, "<a href=\"%sarchive.tar.gz\">archive</a>", relpath);
     if (submodules)
-        fprintf(fp, " | <a href=\"%sfile/%s.html\">Submodules</a>", relpath, submodules);
+        fprintf(fp, " | <a href=\"%sfile/%s.html\">submodules</a>", relpath, submodules);
     if (readme)
         // fprintf(fp, " | <a href=\"%sfile/%s.html\">README</a>", relpath, readme);
         fprintf(fp, " | <a href=\"%sREADME.html\">README</a>", relpath);

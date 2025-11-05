@@ -259,8 +259,8 @@ int main(int argc, char *argv[]) {
 
     // Write output
     writeheader(stdout);
-    fprintf(fp, "<div class=\"repo-list\">\n");
-    fprintf(fp, "<ul>\n");
+    fprintf(stdout, "<div class=\"repo-list\">\n");
+    fprintf(stdout, "<ul>\n");
     for (i = 0; i < nrepos; i++) {
         // open the repo, set globals as needed
         if (git_repository_open_ext(&repo, repos[i].path, GIT_REPOSITORY_OPEN_NO_SEARCH, NULL)) {
@@ -274,8 +274,8 @@ int main(int argc, char *argv[]) {
         writelog(stdout);
         git_repository_free(repo);
     }
-    fprintf(fp, "</ul>\n");
-    fprintf(fp, "</div>\n");
+    fprintf(stdout, "</ul>\n");
+    fprintf(stdout, "</div>\n");
     writefooter(stdout);
 
     git_libgit2_shutdown();

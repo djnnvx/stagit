@@ -513,7 +513,7 @@ void writeheader(FILE *fp, const char *title) {
 }
 
 void writefooter(FILE *fp) {
-    fputs("</table>\n</div>\n<br/>\n<div id=\"footer\">\n"
+    fputs("</div>\n<br/>\n<div id=\"footer\">\n"
           "\t&copy; 2024 djnn, inc &bull; generated with stagit\n"
           "</div>\n</center>",
           fp);
@@ -525,7 +525,7 @@ size_t writeblobhtml(FILE *fp, const git_blob *blob) {
     const char *s = git_blob_rawcontent(blob);
 
     len = git_blob_rawsize(blob);
-    fputs("<pre id=\"blob\">\n", fp);
+    fputs("<pre id=\"blob\" style=\"text-align: left\">\n", fp);
 
     if (len > 0) {
         for (i = 0, prev = 0; i < len; i++) {
@@ -1307,7 +1307,7 @@ int main(int argc, char *argv[]) {
                 fprintf(stderr, "Error parsing markdown\n");
             fputs("</div>\n", fp);
         } else {
-            fputs("<pre id=\"readme\">", fp);
+            fputs("<pre style=\"text-align: left\" id=\"readme\">", fp);
             xmlencode(fp, s, strlen(s));
             fputs("</pre>\n", fp);
         }

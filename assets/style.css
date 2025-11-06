@@ -1,32 +1,17 @@
 :root{
-  --bg:#000000;      /* base07 - Black */
-  --surface:#000000; /* base07 - Black */
-  --text:#fcfcfc;    /* base00 - Near White (for main content) */
-  --muted:#a8a8a8;   /* base03 - Light Gray (for descriptions/muted text) */
-  --link:#00a800;    /* base0B - Bright Green (Like the prompt in image 2) */
-  --accent:#54fc54;  /* base0F - Lighter Green/Cyan (for a highlight) */
-  --card-bg:#000000; /* base07 - Black */
-  --border:#a8a8a8;  /* base03 - Light Gray (for a subtle border) */
-  --code-bg:#000000; /* base07 - Black */
-  --code-border:#7e7e7e; /* base04 - Medium Gray */
-  --row-hover:#2a2a2a; /* base06 - Dark Gray (for table hover) */
+  --bg:#282828;
+  --surface:#282828;
+  --text:#fcfcfc;
+  --muted:#a8a8a8;
+  --link:#5353ef;
+  --accent:#54fc54;
+  --card-bg:#000000;
+  --border:#a8a8a8;
+  --code-bg:#000000;
+  --code-border:#7e7e7e;
+  --row-hover:#2a2a2a;
 }
 
-@media (prefers-color-scheme: light){
-  :root{
-    --bg:#fcfcfc;     /* base00 - Off-White */
-    --surface:#fcfcfc;/* base00 - Off-White */
-    --text:#000000;   /* base07 - Black */
-    --muted:#545454;  /* base05 - Medium Gray */
-    --link:#00a8a8;   /* base0C - Cyan/Teal */
-    --accent:#a85400; /* base0A - Orange */
-    --card-bg:#e0e0e0;/* base01 - Very Light Gray */
-    --border:#a8a8a8; /* base03 - Medium Light Gray */
-    --code-bg:#e0e0e0;/* base01 - Very Light Gray */
-    --code-border:#a8a8a8; /* base03 - Medium Light Gray */
-    --row-hover:#c4c4c4; /* base02 - Light Gray */
-  }
-}
 
 *{font-family:monospace}
 a{color:var(--link);text-decoration:none}

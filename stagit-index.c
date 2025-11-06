@@ -129,7 +129,7 @@ void writeheader(FILE *fp) {
           "<b>evil.djnn.sh ~ repositories</b>\n"
           "\t\t</td></tr>\n\t</table>\n\t</center>\n</div>\n<br>\n",
           fp);
-    fputs("<div id=\"content\">\n\t<center><table id=\"index\">\n\t\t<thead>\n\t\t\t<tr><td><b>name</b></td><td><b>description</b></td><td><b>last commit</b></td></tr>\n\t\t</thead>\n\t\t<tbody>", fp);
+    fputs("<center><div id=\"content\">\n\t<center><table id=\"index\">\n\t\t<thead>\n\t\t\t<tr><td><b>name</b></td><td><b>description</b></td><td><b>last commit</b></td></tr>\n\t\t</thead>\n\t\t<tbody>", fp);
 }
 
 void writefooter(FILE *fp) {

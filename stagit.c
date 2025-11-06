@@ -486,7 +486,7 @@ void writeheader(FILE *fp, const char *title) {
     xmlencode(fp, name, strlen(name));
     fputs("<center>\n<a href=\"/index.html\">\n</a><br><br>\n<div id=\"content\">\n<div class=\"container\">\n\t<table id=\"container\">\n\t\t<tr><td><h1>", fp);
     xmlencode(fp, strippedname, strlen(strippedname));
-    fputs("</h1><span class=\"desc\">", fp);
+    fputs("</h1><span class=\"desc\"> ~ ", fp);
     xmlencode(fp, description, strlen(description));
     fputs("</span></td></tr>\n", fp);
     if (cloneurl[0]) {

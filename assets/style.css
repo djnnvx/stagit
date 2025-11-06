@@ -1,30 +1,30 @@
 :root{
-  --bg:#0b0f14;
-  --surface:#0f1419;
-  --text:#bdbdbd;
-  --muted:#9aa6b2;
-  --link:#88ddcc;
-  --accent:#4fc3f7;
-  --card-bg:#111316;
-  --border:#1e2630;
-  --code-bg:#111111;
-  --code-border:#444444;
-  --row-hover:#111111;
+  --bg:#000000;      /* base07 - Black */
+  --surface:#000000; /* base07 - Black */
+  --text:#fcfcfc;    /* base00 - Near White (for main content) */
+  --muted:#a8a8a8;   /* base03 - Light Gray (for descriptions/muted text) */
+  --link:#00a800;    /* base0B - Bright Green (Like the prompt in image 2) */
+  --accent:#54fc54;  /* base0F - Lighter Green/Cyan (for a highlight) */
+  --card-bg:#000000; /* base07 - Black */
+  --border:#a8a8a8;  /* base03 - Light Gray (for a subtle border) */
+  --code-bg:#000000; /* base07 - Black */
+  --code-border:#7e7e7e; /* base04 - Medium Gray */
+  --row-hover:#2a2a2a; /* base06 - Dark Gray (for table hover) */
 }
 
 @media (prefers-color-scheme: light){
   :root{
-    --bg:#ffffff;
-    --surface:#ffffff;
-    --text:#111827;
-    --muted:#6b7280;
-    --link:#1d4ed8;
-    --accent:#0ea5e9;
-    --card-bg:#f8fafc;
-    --border:#e6e9ef;
-    --code-bg:#f2f4f8;
-    --code-border:#d0d6df;
-    --row-hover:#f6f7f9;
+    --bg:#fcfcfc;     /* base00 - Off-White */
+    --surface:#fcfcfc;/* base00 - Off-White */
+    --text:#000000;   /* base07 - Black */
+    --muted:#545454;  /* base05 - Medium Gray */
+    --link:#00a8a8;   /* base0C - Cyan/Teal */
+    --accent:#a85400; /* base0A - Orange */
+    --card-bg:#e0e0e0;/* base01 - Very Light Gray */
+    --border:#a8a8a8; /* base03 - Medium Light Gray */
+    --code-bg:#e0e0e0;/* base01 - Very Light Gray */
+    --code-border:#a8a8a8; /* base03 - Medium Light Gray */
+    --row-hover:#c4c4c4; /* base02 - Light Gray */
   }
 }
 

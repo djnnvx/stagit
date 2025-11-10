@@ -1,13 +1,13 @@
 :root{
-  --bg:#0b0f14;
-  --surface:#0f1419;
+  --bg:#111111;
+  --surface:#111111;
   --text:#bdbdbd;
   --muted:#9aa6b2;
   --link:#88ddcc;
   --accent:#4fc3f7;
   --card-bg:#111316;
   --border:#1e2630;
-  --code-bg:#111111;
+  --code-bg:#282828;
   --code-border:#444444;
   --row-hover:#111111;
 }
@@ -54,7 +54,7 @@ img{max-width:800px}
 .desc{color:var(--muted)}
 td.num{text-align:right}
 #blob{text-align:left}
-#blob a{color:#555}
+#blob a{color:#333}
 #blob a:hover{color:var(--accent);text-decoration:none}
 #blob a:target{color:#eee}
 #content table td{vertical-align:top;white-space:nowrap}

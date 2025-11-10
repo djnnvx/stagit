@@ -125,11 +125,11 @@ void writeheader(FILE *fp) {
     fputs("<link rel=\"icon\" type=\"image/png\" href=\"/favicon.png\">\n"
           "<link rel=\"stylesheet\" type=\"text/css\" href=\"/style.css\">\n",
           fp);
-    fputs("<div class=\"container\">\n\t<center>\n\t<table>\n\t\t<tr><td>\n"
+    fputs("<center><div class=\"container\">\n\t<center>\n\t<table>\n\t\t<tr><td>\n"
           "<b>evil.djnn.sh ~ repositories</b>\n"
-          "\t\t</td></tr>\n\t</table>\n\t</center>\n</div>\n<br>\n",
+          "\t\t</td></tr>\n\t</table>\n\t</center>\n</div></center>\n<br>\n",
           fp);
-    fputs("<div id=\"content\">\n\t<center><table id=\"index\">\n\t\t<thead>\n\t\t\t<tr><td><b>name</b></td><td><b>description</b></td><td><b>last commit</b></td></tr>\n\t\t</thead>\n\t\t<tbody>", fp);
+    fputs("<center><div id=\"content\">\n\t<center><table id=\"index\">\n\t\t<thead>\n\t\t\t<tr><td><b>name</b></td><td><b>description</b></td><td><b>last commit</b></td></tr>\n\t\t</thead>\n\t\t<tbody>", fp);
 }
 
 void writefooter(FILE *fp) {

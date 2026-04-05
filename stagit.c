@@ -514,7 +514,7 @@ void writeheader(FILE *fp, const char *title) {
 
 void writefooter(FILE *fp) {
     fputs("</div>\n<br/>\n<div id=\"footer\">\n"
-          "\t&copy; 2024 djnn, inc &bull; generated with stagit\n"
+          "\t&copy; 2024 - 2026 djnn, inc &bull; generated with stagit\n"
           "</div>\n</center>",
           fp);
 }
